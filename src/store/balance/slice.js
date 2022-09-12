@@ -7,7 +7,11 @@ const initialState = {
 export const balanceSlice = createSlice({
   name: "balance",
   initialState,
-  reducers: {},
+  reducers: {
+    deposit: (state, action) => {
+      state.amount = state.amount + action.payload;
+    },
+  },
 });
 
 export const {} = balanceSlice.actions;
